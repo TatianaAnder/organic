@@ -24,7 +24,6 @@ body {
     border: 2px solid #fff;
     padding: 10px 20px;
     font-size: 16px;
-
     transition: 0.2s opacity;
 }
 
@@ -60,7 +59,6 @@ body {
     font-size: 24px;
     width: 150px;
     line-height: 1;
-
     grid-area: logo;
 }
 
@@ -82,7 +80,11 @@ body {
 }
 
 .header__nav a:hover, .logo:hover {
-    color: #457b9d;
+    background-image: linear-gradient(
+        to right, #f99696, #457b9d 
+    );
+    background-clip: text;
+    color: transparent;
 }
 
 .header__nav a:active {
@@ -137,6 +139,7 @@ body {
 .slider-arrows {
     grid-area: slider-arrows;
     position: relative;
+    
 }
 
 .slider-arroes__items-wrapper {
@@ -144,6 +147,12 @@ body {
     height: 100%;
 
     display: flex;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-arroes__items-wrapper:hover {
+    transform: scale(1.1);
 }
 
 .slider-arrows__nav {
@@ -191,6 +200,12 @@ body {
     height: 100%;
 
     display: flex;
+
+    transition: 0.3s ease-in-out;
+}
+
+.slider-dots__items-wrapper:hover{
+    transform: scale(1.1);
 }
 
 .slider-dots__btn-wrapper {
@@ -328,6 +343,11 @@ body {
     width: 100%;
     height: 100%;
     filter: brightness(90%);
+    transition: 0.3s ease-in-out;
+}
+
+.orange img:hover {
+    transform: scale(1.1);
 }
 
 .orange__btn-wrapper {
